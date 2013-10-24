@@ -1,0 +1,10 @@
+{
+"port": ":9998",
+"nodeid": "B",
+"urlget": "/captcha/get",
+"urlcheck": "/captcha/check/",
+"font": "perpetua_bold1",
+"count": 4,
+"time_chan": 2,
+"allowed_symbols": [10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,29,30,31,32,33,34,35]
+}
