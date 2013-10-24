@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://ercaptcha.net/en_api.htm -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+
+    
+        <title>api captcha service</title>
+        <meta name="description" lang="en" content="ercaptca captcha service">
+        <link rel="stylesheet" href="./api captcha service_files/style.css" type="text/css">
+        <link rel="shortcut icon" href="http://ercaptcha.net/img/favicon.ico">
+    </head>
+    <body>  
+    <!-- Rating@Mail.ru counter -->
+<script type="text/javascript" async="" src="./api captcha service_files/code.js"></script><script type="text/javascript">//<![CDATA[
+var _tmr = _tmr || [];
+_tmr.push({id: "2413860", type: "pageView", start: (new Date()).getTime()});
+(function (d, w) {
+   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+   ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+   var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);
+//]]></script><noscript>&lt;div style="position:absolute;left:-10000px;"&gt;
+&lt;img src="//top-fwz1.mail.ru/counter?id=2413860;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" /&gt;
+&lt;/div&gt;</noscript>
+<!-- //Rating@Mail.ru counter -->                      
+        <div id="main"> 
+        <div id="left">
+         <div class="mini-panel">
+        <a href="http://ercaptcha.net/api.htm">ru</a> / en<br><br>
+        
+        <a href="http://ercaptcha.net/en_index.htm">main</a><br>
+        <a href="./api captcha service_files/api captcha service.htm">api</a><br>        
+        <a href="https://groups.google.com/forum/#!forum/ercaptcha">forum</a>
+                <br><br>
+        <!-- Rating@Mail.ru logo -->
+<a href="http://top.mail.ru/jump?from=2413860">
+<img src="./api captcha service_files/counter" style="border:0;" height="18" width="88" alt="Рейтинг@Mail.ru"></a>
+<!-- //Rating@Mail.ru logo -->
+        </div>
+        </div>                           
+            <div id="center">
+        <div><img src="./api captcha service_files/er.png"></div>        
+        <div class="i">
+        <div class="page_panel">api</div>        
+        <table>
+        <tbody><tr><td colspan="2">1.</td></tr>
+        <tr><td>assign</td><td><pre>request captcha</pre></td></tr>
+        <tr><td>request get</td><td><pre>http://api.ercaptcha.net/captcha/get</pre></td></tr>
+        <tr><td>response json/jsonp</td><td><pre>{    
+  id: id
+  img: base64 encode png image
+}</pre></td>
+        </tr>
+        <tr>
+        <td>addition</td><td><pre>if the query parameter is present 'callback' response is returned in the format 'jsonp'</pre></td>
+        </tr>
+       
+        <tr><td colspan="2">2.</td></tr>
+        
+       
+        <tr><td>assign</td><td><pre>check the entered captcha</pre></td></tr>
+        <tr><td>request get</td><td><pre>http://api.ercaptcha.net/captcha/check/'id'/'value of captcha'</pre></td></tr>
+        <tr><td>response</td><td><pre>'0' =&gt; 'invalid query format',
+'1' =&gt; 'ok',
+'2' =&gt; 'code of protection against robots entered correctly, repeat the entry',
+'3' =&gt; 'code of protection against robots outdated, repeat the entry',
+'4' =&gt; 'attempt to re-use the captcha',  </pre></td>
+        </tr>
+        <tr>
+        <td>addition</td><td><pre>code 0 is returned:
+- in case of technical problems (incorrect id captcha).
+code 1 is returned:
+- if successful, the recognition of previously not recognized captcha.
+code 2 is returned:
+- in case of unsuccessful recognition captchas.
+code 3 returns:
+- sometimes when you try to captcha recognition when it was over 2 hours from the time of its generation;
+- always when you try to recognition captcha after more than 4 hours from the time of its generation.
+code 4 is returned:
+- when you try to re-use previously captcha recognized;
+- after 3 failed attempts to recognize one captcha.</pre></td>
+        </tr>                             
+        </tbody></table>
+        </div>                        
+        <div class="i">
+        <div class="page_panel">scheme of work</div>
+        <div class="center">
+        <img src="./api captcha service_files/action.png">
+        </div>
+        </div>
+        
+         
+           
+         
+        
+        
+        
+                                
+            <div class="c">©2013 ercaptca.net</div>    
+            </div>
+             <div class="granica"> </div>           
+        </div>
+    
+</body></html>
